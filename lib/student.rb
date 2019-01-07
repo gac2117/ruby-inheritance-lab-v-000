@@ -1,7 +1,15 @@
 class Student < User
-  def intiialize(first_name, last_name)
-    @first_name = first_name
-    @last_name = last_name
+  attr_accessor :knowledge
+  def intiialize
     @knowledge = []
   end
+
+  def learn(knowledge)
+    @knowledge << knowledge
+  end
+
+  def knowledge
+    @knowledge
+  end 
+    
 end
